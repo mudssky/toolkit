@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/electron-vite.animate.svg'
 import './App.css'
+import { Button } from 'antd'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,12 +17,16 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1 className="text-red-400">Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button
+          onClick={() => setCount((count) => count + 1)}
+          className="bg-red-400"
+        >
           count is {count}
         </button>
-        <p>
+        <Button type="primary">测试antd button</Button>
+        <p className="bg-red-600">
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
